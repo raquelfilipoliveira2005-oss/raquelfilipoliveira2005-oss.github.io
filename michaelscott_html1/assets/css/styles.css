@@ -1,0 +1,213 @@
+:root {
+  --texto: #222;
+  --titulo: #2f3e46;
+  --fundo-claro: #f7f7f7;
+  --hero-bg: #8e989d;
+  --hero-texto: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Helvetica", Arial, sans-serif;
+  color: var(--texto);
+  background-color: var(--fundo-claro);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: var(--titulo);
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
+/* Header */
+header {
+  background-color: var(--hero-bg);
+  color: var(--hero-texto);
+  text-align: center;
+  padding: 40px 10px;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-family: "Impact", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0.2rem 0;
+  color: #2f3e46;
+}
+
+/* Hero Image */
+main > img {
+  max-width: 100%;
+  height: auto;
+  max-height: 600px;
+  width: auto;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+/* Navegação */
+nav {
+  background-color: #2f3e46;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: static;
+  top: 0;
+  z-index: 100;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  padding: 0;
+  margin: 0;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: all 0.18s ease;
+  letter-spacing: 0.2px;
+}
+
+nav a:hover {
+  background-color: rgba(255,255,255,0.1);
+  transform: translateY(-2px);
+}
+
+nav a:active {
+  transform: translateY(0);
+}
+
+/* Conteúdo principal */
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  /* reduce bottom padding so footer sits closer */
+  padding: 16px 16px 8px 16px;
+}
+
+strong {
+  font-family: "Helvetica", Arial, sans-serif;
+  font-weight: bold;
+}
+
+/* Artigos e seções */
+article {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+/* Citações */
+blockquote {
+  border-left: 4px solid var(--titulo);
+  padding-left: 12px;
+  margin: 12px 0;
+  font-style: italic;
+  color: #555;
+}
+
+/* Botão voltar ao topo */
+a[href="#top"] {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--titulo);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 30px;
+  font-family: "Impact", Helvetica, sans-serif;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+a[href="#top"]:hover {
+  background-color: #2f3e46;
+}
+
+/* Listas */
+ul, ol {
+  margin: 0 0 1rem 1.25rem;
+  padding-left: 1rem;
+  list-style-position: outside;
+}
+
+/* Episódios notáveis: um único bloco/card para toda a secção */
+#episodios-notaveis {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  padding: 18px;
+  border-radius: 6px;
+  /* reduce space below this block so footer sits closer */
+  margin-bottom: 0.5rem;
+}
+
+/* dentro do bloco, manter listas com espaçamento agradável */
+#episodios-notaveis ul {
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+}
+
+#episodios-notaveis ul > li {
+  margin-bottom: 0.75rem;
+}
+
+#episodios-notaveis ul > li strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* Tipografia */
+p {
+  margin: 0 0 1rem 0;
+}
+
+/* Rodapé */
+footer {
+  max-width: 960px;
+  /* reduce top margin so footer is closer to previous content */
+  margin: 0.5rem auto;
+  padding: 16px;
+}
+
+/* remove extra bottom margin from the last paragraph inside the episodes block */
+#episodios-notaveis p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Media Queries */
+@media (max-width: 800px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header {
+    padding: 60px 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  header h1 {
+    font-size: 2rem;
+  }
+}
